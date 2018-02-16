@@ -1,0 +1,29 @@
+{
+  "name": "CatGenerator2k18",
+  "version": "1.0.0",
+  "description": "Project Name Cat Generator Xtreme 2k18 Heading Name the product in a way the reader (i.e. your target customers) will understand.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhmorrow/CatGenerator2k18.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhmorrow/CatGenerator2k18/issues"
+  },
+  "homepage": "https://github.com/rhmorrow/CatGenerator2k18#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "jquery": "^3.3.1",
+    "node": "^9.5.0",
+    "path": "^0.12.7",
+    "react": "^16.2.0"
+  }
+}
