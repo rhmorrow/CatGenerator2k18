@@ -1,11 +1,7 @@
 Project Name
 Cat Generator Xtreme 2k18
-Heading
-Name the product in a way the reader (i.e. your target customers) will understand.
 
-Sub-Heading
 Your one stop shop for creating collections of virtual cats.
-Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
 
 Summary
 Have you ever felt lonely? Absolutely. We all have. Cats are the obvious answer, but they're so expensive. They're so fickle. Not everyone knows this, but as a cat owner, you'll also have to dig up poop every day of your life--potentially for over a decade! That's a lot of work just to fill the void in our hearts.
