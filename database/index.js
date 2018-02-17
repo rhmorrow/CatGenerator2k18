@@ -7,7 +7,6 @@ const Cat = mongoose.model('Cat', {name: String, image: String});
 const get = function(cb) {
   Cat
   .find()
-  .limit(10)
   .exec(cb)
 }
 
