@@ -1,4 +1,3 @@
-Project Name
 Cat Generator Xtreme 2k18
 
 Your one stop shop for creating collections of virtual cats.
