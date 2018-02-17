@@ -24,37 +24,65 @@ var Form = function (_React$Component) {
         "div",
         null,
         React.createElement(
-          "a",
+          "p",
           null,
           "Cat Name: ",
           React.createElement("input", { value: this.props.catName, onChange: this.props.onChange })
         ),
-        "Cat Avatar: ",
         React.createElement(
-          "select",
-          { onChange: this.props.onPicChange },
+          "p",
+          null,
+          "Cat Avatar: ",
           React.createElement(
-            "option",
-            { value: "0" },
-            "Tuxedo Prankster"
-          ),
-          React.createElement(
-            "option",
-            { value: "1" },
-            "Cute Calico"
-          ),
-          React.createElement(
-            "option",
-            { value: "2" },
-            "Lil' Gray Cat"
-          ),
-          React.createElement(
-            "option",
-            { value: "3" },
-            "Cheeky Orange Fluff"
+            "select",
+            { onChange: this.props.onPicChange },
+            React.createElement(
+              "option",
+              { value: "0" },
+              "Tuxedo Prankster"
+            ),
+            React.createElement(
+              "option",
+              { value: "1" },
+              "Cute Calico"
+            ),
+            React.createElement(
+              "option",
+              { value: "2" },
+              "Lil' Gray Cat"
+            ),
+            React.createElement(
+              "option",
+              { value: "3" },
+              "Cheeky Orange Fluff"
+            ),
+            React.createElement(
+              "option",
+              { value: "4" },
+              "Tan and Blocky"
+            ),
+            React.createElement(
+              "option",
+              { value: "5" },
+              "Very White and Fluffy"
+            ),
+            React.createElement(
+              "option",
+              { value: "6" },
+              "A loaf"
+            )
           )
         ),
-        React.createElement("img", { src: this.props.catPic, width: "50", height: "50" }),
+        React.createElement(
+          "div",
+          { className: "catPreview" },
+          React.createElement(
+            "a",
+            null,
+            "Cat Preview:"
+          ),
+          React.createElement("img", { src: this.props.catPic, width: "60", height: "60" })
+        ),
         React.createElement(
           "button",
           { className: "button", onClick: this.props.onSend },

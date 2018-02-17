@@ -18,8 +18,8 @@ What Developers are Saying:
 How to Get Started:
 Just describe the name and features of the cat you want to bring into this world, and with the click of a button, he'll be saved to our cat database and displayed on screen to enjoy.
 
-Customer Quote:
-"I don't know how I got by without these fake cats. Thanks, Cat Generator Xtreme dev team!"
+What Customers Are Saying:
+"I don't know how I got by without these fake cats. I once was lost, but now am found. Thanks, Cat Generator Xtreme 2k18 dev team!"
 
 Closing and Call to Action:
 If you're somehow still reading this ReadMe, what's up with that? Go on and make a digital cat or ten to call your own. You're a champion, and you deserve it.

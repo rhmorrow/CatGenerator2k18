@@ -8,30 +8,48 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var CatView = function (_React$Component) {
-  _inherits(CatView, _React$Component);
+var Catterbox = function (_React$Component) {
+  _inherits(Catterbox, _React$Component);
 
-  function CatView(props) {
-    _classCallCheck(this, CatView);
+  function Catterbox(props) {
+    _classCallCheck(this, Catterbox);
 
-    return _possibleConstructorReturn(this, (CatView.__proto__ || Object.getPrototypeOf(CatView)).call(this, props));
+    return _possibleConstructorReturn(this, (Catterbox.__proto__ || Object.getPrototypeOf(Catterbox)).call(this, props));
   }
 
-  _createClass(CatView, [{
+  _createClass(Catterbox, [{
     key: "render",
     value: function render() {
       return React.createElement(
         "div",
-        { onClick: this.props.meow },
-        React.createElement("img", { src: this.props.catPic, width: "20", height: "20" }),
-        " ",
-        this.props.catName,
-        " is ",
-        this.props.cativity,
-        "!"
+        { className: "catterbox" },
+        React.createElement(
+          "h3",
+          null,
+          "CatterBox"
+        ),
+        React.createElement(
+          "div",
+          null,
+          React.createElement(
+            "div",
+            null,
+            "Currently ",
+            this.props.cats.length,
+            " cats in chat."
+          ),
+          this.props.meowing.map(function (cat) {
+            return React.createElement(
+              "div",
+              null,
+              cat,
+              ": Meow!"
+            );
+          })
+        )
       );
     }
   }]);
 
-  return CatView;
+  return Catterbox;
 }(React.Component);

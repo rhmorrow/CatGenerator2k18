@@ -4,11 +4,12 @@ class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      catName: 'Fluffy',
+      catName: '',
       cats: [],
       cativities: ['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble'],
-      catPics: ["http://33.media.tumblr.com/f02aed641beb7a5059d57484c7f80f8c/tumblr_nlmmguXypN1tv87ujo1_400.gif", "https://s-media-cache-ak0.pinimg.com/originals/56/01/f8/5601f86fe8928676688bd32f17f99651.gif", "https://orig00.deviantart.net/5ff5/f/2013/267/e/4/tumblr_mq43pqiiel1s8mgkyo1_500_by_mydreammagic-d6nqi77.gif", "https://vignette.wikia.nocookie.net/clubpenguinpookie/images/1/10/Cat2.gif/revision/latest?cb=20150313190619"],
-      catPic: "http://33.media.tumblr.com/f02aed641beb7a5059d57484c7f80f8c/tumblr_nlmmguXypN1tv87ujo1_400.gif"
+      catPics: ["images/black.gif", "images/calico.gif", "images/gray.gif", "images/orange.gif", "images/squarebrown.gif", "images/white.gif", "images/loaf.gif"],
+      catPic: "images/black.gif",
+      meowing: []
     }
     this.findCats();
   }
@@ -61,14 +62,23 @@ class App extends React.Component{
     })
   }
 
+  meow(e){
+    this.setState({
+      meowing: [e.target.props.catName]
+    })
+  }
+
   render() {
     return(<div>
       <h1>Welcome to Cat Generator Xtreme 2k18!</h1>
       <h2>To create a new cat, enter its details into the field below.</h2>
       <Form catName={this.state.catName} catPic={this.state.catPic} onPicChange={this.onPicChange.bind(this)} onChange={this.onChange.bind(this)} onSend={this.submit.bind(this)}/>
+      <Catterbox cats={this.state.cats} meowing={this.state.meowing}/>
+      <div className="catzone">CAT COLLECTION
       {this.state.cats.map(function(cat) {
-        return <CatView key={cat._id} catName={cat.name} catPic={cat.image} cativity={['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble', 'hunting toy mice', 'staring at you as you poop', 'meowing for no reason'][Math.floor(Math.random()*10)]}/>
+        return <CatView className="cat" key={cat._id} meow={this.meow.bind(this)} catName={cat.name} catPic={cat.image} cativity={['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble', 'hunting toy mice', 'staring at you as you poop', 'meowing for no reason'][Math.floor(Math.random()*10)]}/>
       })}
+      </div>
       </div>)
   }
 };

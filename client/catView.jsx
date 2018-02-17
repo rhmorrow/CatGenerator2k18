@@ -5,7 +5,7 @@ class CatView extends React.Component {
 
 
   render() {
-    return (<div>
+    return (<div onClick={this.props.meow}>
       <img src={this.props.catPic} width="20" height="20"/> {this.props.catName} is {this.props.cativity}!
     </div>
     )

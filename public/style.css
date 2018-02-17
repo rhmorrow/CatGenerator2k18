@@ -1,6 +1,6 @@
 a {
-  background-color: gray;
-  height:25px;
+  padding: 10px 20px;
+  font-size: 16px;
 }
 
 h1 {
@@ -15,6 +15,7 @@ h2 {
 img {
   border: 2px solid gray;
   border-radius: 3px;
+  align-self: center;
 }
 
 .button {
@@ -27,4 +28,28 @@ img {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.catPreview {
+  border: 2px solid gray;
+  border-radius: 3px;
+  width: 65px;
+  height: 100px;
+  align-items: center;
+}
+
+.catterbox{
+  border: 2px solid gray;
+  float:right;
+}
+
+.catZone {
+  float:right;
+  border: 1px dotted gray;
+  border-radius: 10px;
+}
+
+.cat {
+  float: right;
+  border: 1px dotted gray;
 }
