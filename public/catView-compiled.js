@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -14,24 +14,39 @@ var CatView = function (_React$Component) {
   function CatView(props) {
     _classCallCheck(this, CatView);
 
-    return _possibleConstructorReturn(this, (CatView.__proto__ || Object.getPrototypeOf(CatView)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (CatView.__proto__ || Object.getPrototypeOf(CatView)).call(this, props));
+
+    _this.state = {
+      cativities: ['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble', 'hunting toy mice', 'staring at you as you poop', 'meowing for no reason'],
+      cativity: _this.props.cativity
+    };
+    _this.change.bind(_this);
+    return _this;
   }
 
   _createClass(CatView, [{
-    key: "render",
+    key: 'change',
+    value: function change() {
+      var cat = this;
+      this.setState({
+        cativity: cat.state.cativities[Math.floor(Math.random() * 10)]
+      });
+    }
+  }, {
+    key: 'render',
     value: function render() {
       return React.createElement(
-        "div",
-        { className: "catView", onClick: this.props.meow },
-        React.createElement("img", { src: this.props.catPic, width: "30", height: "30" }),
-        " ",
+        'div',
+        { className: 'catView', onClick: this.props.meow },
+        React.createElement('img', { onClick: this.change.bind(this), src: this.props.catPic, width: '30', height: '30' }),
+        ' ',
         React.createElement(
-          "a",
+          'a',
           null,
           this.props.catName,
-          " is ",
-          this.props.cativity,
-          "! "
+          ' is ',
+          this.state.cativity,
+          '! '
         )
       );
     }
