@@ -1,0 +1,30 @@
+a {
+  background-color: gray;
+  height:25px;
+}
+
+h1 {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px
+}
+
+h2 {
+  text-align: center;
+}
+img {
+  border: 2px solid gray;
+  border-radius: 3px;
+}
+
+.button {
+    background-color: gray; /* Green */
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

@@ -16,8 +16,8 @@ app.get('/cats', function(req, res) {
     if(err){
       console.error(err)
     }
-    console.log('Cats got.')
-    res.end(data);
+    console.log('Cats got. ', data)
+    res.end(JSON.stringify(data));
   });
 })
 app.post('/cats', function(req, res) {
