@@ -26,4 +26,4 @@ app.post('/cats', function(req, res) {
   res.end('Cat received!');
 })
 
-app.listen(process.env.PORT || 3131, () => console.log('CGX18 listening on port 3131 :3'))
+app.listen(process.env.PORT || 3131, () => console.log('CGX18 listening on port ' + process.env.PORT || 3131 + ' :3'))

@@ -47,6 +47,10 @@ class App extends React.Component{
     var cat = this.state.catName
     var pic = this.state.catPic
     var app = this;
+    if(cat === "Moxie") {
+      console.log('Mox man?!')
+      var pic = 'images/moxie.jpg'
+    }
     $.ajax({
       type: 'POST',
       url: '/cats',
