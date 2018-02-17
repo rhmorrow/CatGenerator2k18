@@ -112,7 +112,7 @@ var App = function (_React$Component) {
           { className: 'catzone' },
           'CAT COLLECTION',
           this.state.cats.map(function (cat) {
-            return React.createElement(CatView, { className: 'cat', key: cat._id, meow: this.meow.bind(this), catName: cat.name, catPic: cat.image, cativity: ['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble', 'hunting toy mice', 'staring at you as you poop', 'meowing for no reason'][Math.floor(Math.random() * 10)] });
+            return React.createElement(CatView, { className: 'cat', key: cat._id, catName: cat.name, catPic: cat.image, cativity: ['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble', 'hunting toy mice', 'staring at you as you poop', 'meowing for no reason'][Math.floor(Math.random() * 10)] });
           })
         )
       );
