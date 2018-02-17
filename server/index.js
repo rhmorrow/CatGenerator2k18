@@ -22,7 +22,6 @@ app.get('/cats', function(req, res) {
 })
 app.post('/cats', function(req, res) {
   res.writeHead(200);
-  console.log(req.body);
   db.save(req.body);
   res.end('Cat received!');
 })
