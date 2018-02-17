@@ -26,4 +26,11 @@ app.post('/cats', function(req, res) {
   res.end('Cat received!');
 })
 
+app.delete('/cats', function(req, res) {
+  console.log(req.body)
+  db.remove(req.body);
+  res.writeHead(200);
+  res.end('Cat has been set free.')
+})
+
 app.listen(process.env.PORT || 3131, () => console.log('CGX18 listening on port ' + process.env.PORT || 3131 + ' :3'))

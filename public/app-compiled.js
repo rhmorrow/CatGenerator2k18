@@ -21,7 +21,7 @@ var App = function (_React$Component) {
     _this.state = {
       catName: '',
       cats: [],
-      cativities: ['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble'],
+      cativities: ['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble', 'hunting toy mice', 'staring at you as you poop', 'meowing for no reason'],
       catPics: ["images/black.gif", "images/calico.gif", "images/gray.gif", "images/orange.gif", "images/squarebrown.gif", "images/white.gif", "images/loaf.gif"],
       catPic: "images/black.gif",
       meowing: []
@@ -53,9 +53,29 @@ var App = function (_React$Component) {
         url: '/cats',
         dataType: "text",
         success: function success(data) {
-          app.setState({
-            cats: JSON.parse(data)
+          data = JSON.parse(data);
+          data.forEach(function (cat) {
+            cat.cativity = app.state.cativities[Math.floor(Math.random() * 10)];
           });
+          app.setState({
+            cats: data
+          });
+        },
+        error: function error() {
+          console.log('Sorry, the cats chewed up the server cables. . .');
+        }
+      });
+    }
+  }, {
+    key: 'removeCat',
+    value: function removeCat(catName) {
+      $.ajax({
+        type: 'DELETE',
+        url: '/cats',
+        data: { catName: catName },
+        dataType: "text",
+        success: function success() {
+          console.log(catName + ' has been set loose!');
         },
         error: function error() {
           console.log('Sorry, the cats chewed up the server cables. . .');
@@ -79,7 +99,9 @@ var App = function (_React$Component) {
         dataType: "text",
         success: function success() {
           console.log('Your new cat ' + cat + ' is happy to now exist!');
-          app.findCats();
+          setTimeout(function () {
+            app.findCats();
+          }, 100);
         },
         error: function error() {
           console.log('Sorry, the cats chewed up the server cables. . .');
@@ -114,9 +136,13 @@ var App = function (_React$Component) {
         React.createElement(
           'div',
           { className: 'catzone' },
-          'CAT COLLECTION',
+          React.createElement(
+            'h2',
+            null,
+            'CAT COLLECTION'
+          ),
           this.state.cats.map(function (cat) {
-            return React.createElement(CatView, { className: 'cat', key: cat._id, catName: cat.name, catPic: cat.image, cativity: ['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble', 'hunting toy mice', 'staring at you as you poop', 'meowing for no reason'][Math.floor(Math.random() * 10)] });
+            return React.createElement(CatView, { className: 'cat', key: cat._id, catName: cat.name, catPic: cat.image, cativity: cat.cativity });
           })
         )
       );

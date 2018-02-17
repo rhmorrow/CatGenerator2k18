@@ -25,5 +25,12 @@ const save = function(data) {
   });
 }
 
+const remove = function(data) {
+  Cat.remove({'name': data.catName}, function(err) {
+    if(err) return handleError(err);
+  })
+}
+
 module.exports.get = get;
 module.exports.save = save;
+module.exports.remove = remove;

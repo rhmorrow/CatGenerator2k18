@@ -22,13 +22,17 @@ var CatView = function (_React$Component) {
     value: function render() {
       return React.createElement(
         "div",
-        { onClick: this.props.meow },
-        React.createElement("img", { src: this.props.catPic, width: "20", height: "20" }),
+        { className: "catView", onClick: this.props.meow },
+        React.createElement("img", { src: this.props.catPic, width: "30", height: "30" }),
         " ",
-        this.props.catName,
-        " is ",
-        this.props.cativity,
-        "!"
+        React.createElement(
+          "a",
+          null,
+          this.props.catName,
+          " is ",
+          this.props.cativity,
+          "! "
+        )
       );
     }
   }]);

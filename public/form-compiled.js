@@ -84,9 +84,13 @@ var Form = function (_React$Component) {
           React.createElement("img", { src: this.props.catPic, width: "60", height: "60" })
         ),
         React.createElement(
-          "button",
-          { className: "button", onClick: this.props.onSend },
-          "Submit Cat"
+          "div",
+          { className: "buttonDiv" },
+          React.createElement(
+            "button",
+            { className: "button", onClick: this.props.onSend },
+            "Submit Cat"
+          )
         )
       );
     }

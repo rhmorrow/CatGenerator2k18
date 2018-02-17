@@ -1,8 +1,12 @@
 a {
   padding: 10px 20px;
   font-size: 16px;
+  font-weight: bold;
 }
 
+body {
+  background-color: maroon;
+}
 h1 {
   text-align: center;
   border: 2px solid black;
@@ -12,26 +16,39 @@ h1 {
 h2 {
   text-align: center;
 }
+
 img {
-  border: 2px solid gray;
+  border: 2px solid red;
   border-radius: 3px;
   align-self: center;
 }
 
-.button {
-    background-color: gray; /* Green */
-    border: none;
-    border-radius: 15px;
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+p {
+  margin: auto;
+  color: red;
 }
 
+.button {
+  background-color: red; /* Green */
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.buttonDiv{
+  margin: auto;
+  align-content: center;
+}
+.catView {
+  margin: 5px;
+}
 .catPreview {
-  border: 2px solid gray;
+  margin: auto;
+  border: 2px solid red;
   border-radius: 3px;
   width: 65px;
   height: 100px;
@@ -39,17 +56,17 @@ img {
 }
 
 .catterbox{
-  border: 2px solid gray;
+  border: 2px solid red;
   float:right;
 }
 
-.catZone {
-  float:right;
-  border: 1px dotted gray;
+.catzone {
+  margin: auto;
+  width: 40%;
+  border: 1px dotted red;
   border-radius: 10px;
 }
 
 .cat {
-  float: right;
   border: 1px dotted gray;
 }

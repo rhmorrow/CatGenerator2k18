@@ -21,7 +21,7 @@ class Form extends React.Component {
         <a>Cat Preview:</a>
         <img src={this.props.catPic} width="60" height="60" />
         </div>
-      <button className="button" onClick={this.props.onSend}>Submit Cat</button>
+      <div className="buttonDiv"><button className="button" onClick={this.props.onSend}>Submit Cat</button></div>
     </div>
     )
   }
