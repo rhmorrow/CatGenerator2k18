@@ -4,7 +4,7 @@
   "description": "Project Name Cat Generator Xtreme 2k18 Heading Name the product in a way the reader (i.e. your target customers) will understand.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel client/app.jsx -d lib"
   },
