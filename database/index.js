@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/db')
+mongoose.connect('mongodb://catguy:moxie@ds137246.mlab.com:37246/heroku_r0h8h8k7')
 
 
 const Cat = mongoose.model('Cat', {name: String, image: String});
