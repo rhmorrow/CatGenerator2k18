@@ -11,9 +11,18 @@ const get = function(cb) {
 }
 
 const save = function(data) {
-  console.log(Cat.find({name: data.catName}).results);
-  const newCat = new Cat({name: data.catName, image: data.catPic});
-  newCat.save().then(() => console.log('meow'));
+  Cat.findOne({ 'name': data.catName }, function (err, cat) {
+    if (err) {
+      console.error(err);
+    } else {
+      if(cat !== null) {
+        console.log(data.catName, ' is already here!')
+      } else {
+        const newCat = new Cat({name: data.catName, image: data.catPic});
+        newCat.save().then(() => console.log('meow'));
+      }
+    }
+  });
 }
 
 module.exports.get = get;
