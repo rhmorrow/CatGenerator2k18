@@ -23,8 +23,7 @@ var App = function (_React$Component) {
       cats: [],
       cativities: ['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble', 'hunting toy mice', 'staring at you as you poop', 'meowing for no reason'],
       catPics: ["images/black.gif", "images/calico.gif", "images/gray.gif", "images/orange.gif", "images/squarebrown.gif", "images/white.gif", "images/loaf.gif"],
-      catPic: "images/black.gif",
-      meowing: []
+      catPic: "images/black.gif"
     };
     _this.findCats();
     return _this;
@@ -132,7 +131,7 @@ var App = function (_React$Component) {
           'To create a new cat, enter its details into the field below.'
         ),
         React.createElement(Form, { catName: this.state.catName, catPic: this.state.catPic, onPicChange: this.onPicChange.bind(this), onChange: this.onChange.bind(this), onSend: this.submit.bind(this) }),
-        React.createElement(Catterbox, { cats: this.state.cats, meowing: this.state.meowing }),
+        React.createElement(Catterbox, { cats: this.state.cats }),
         React.createElement(
           'div',
           { className: 'catzone' },

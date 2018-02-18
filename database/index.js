@@ -7,6 +7,7 @@ const Cat = mongoose.model('Cat', {name: String, image: String});
 const get = function(cb) {
   Cat
   .find()
+  .sort({'_id': -1})
   .exec(cb)
 }
 

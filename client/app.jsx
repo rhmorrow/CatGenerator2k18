@@ -8,8 +8,7 @@ class App extends React.Component{
       cats: [],
       cativities: ['purring', 'sleeping', 'staring at you', 'climbing up the curtains', 'knocking things off the wall', 'nuzzling you', 'getting into trouble', 'hunting toy mice', 'staring at you as you poop', 'meowing for no reason'],
       catPics: ["images/black.gif", "images/calico.gif", "images/gray.gif", "images/orange.gif", "images/squarebrown.gif", "images/white.gif", "images/loaf.gif"],
-      catPic: "images/black.gif",
-      meowing: []
+      catPic: "images/black.gif"
     }
     this.findCats();
   }
@@ -98,7 +97,7 @@ class App extends React.Component{
       <h1>Welcome to Cat Generator Xtreme 2k18!</h1>
       <h2>To create a new cat, enter its details into the field below.</h2>
       <Form catName={this.state.catName} catPic={this.state.catPic} onPicChange={this.onPicChange.bind(this)} onChange={this.onChange.bind(this)} onSend={this.submit.bind(this)}/>
-      <Catterbox cats={this.state.cats} meowing={this.state.meowing}/>
+      <Catterbox cats={this.state.cats}/>
       <div className="catzone"><h2>CAT COLLECTION</h2>
       {this.state.cats.map(function(cat) {
         return <CatView className="cat" key={cat._id} catName={cat.name} catPic={cat.image} cativity={cat.cativity}/>

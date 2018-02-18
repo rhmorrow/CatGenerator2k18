@@ -14,10 +14,30 @@ var Catterbox = function (_React$Component) {
   function Catterbox(props) {
     _classCallCheck(this, Catterbox);
 
-    return _possibleConstructorReturn(this, (Catterbox.__proto__ || Object.getPrototypeOf(Catterbox)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Catterbox.__proto__ || Object.getPrototypeOf(Catterbox)).call(this, props));
+
+    _this.state = {
+      meows: []
+    };
+    _this.startMeowing = _this.startMeowing.bind(_this);
+    _this.meow = _this.meow.bind(_this);
+    _this.startMeowing();
+    return _this;
   }
 
   _createClass(Catterbox, [{
+    key: "startMeowing",
+    value: function startMeowing() {
+      this.props.cats.forEach(function (cat) {
+        this.meow(cat.catName);
+      });
+    }
+  }, {
+    key: "meow",
+    value: function meow(catName) {
+      this.state.meows.push(catName + ": Meow!");
+    }
+  }, {
     key: "render",
     value: function render() {
       return React.createElement(
@@ -38,12 +58,11 @@ var Catterbox = function (_React$Component) {
             this.props.cats.length,
             " cats in chat."
           ),
-          this.props.meowing.map(function (cat) {
+          this.state.meows.map(function (meow) {
             return React.createElement(
               "div",
               null,
-              cat,
-              ": Meow!"
+              "meow"
             );
           })
         )
